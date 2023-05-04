@@ -1,3 +1,71 @@
+#Pseudocode
+
+#class ClothesPriorityQueue:
+#
+#    FUNCTION constructor
+#
+#        INITIALISE list
+#
+#    FUNCTION print queue
+#
+#        PRINT header
+#
+#        FOR each task in list
+#            PRINT task information
+#
+#    FUNCTION print number of tasks of each priority 
+#        INITIALISE dictionary for priority and count
+#        
+#        FOR each task in list
+#            take task's priority and add 1 to count in dictionary
+#
+#        FOR each priority in dictionary
+#            PRINT priority and count
+#
+#    FUNCTION print next task
+#        retrieve task of index 0 in list and print
+#
+#    FUNCTION print all tasks of highest priority
+#        FOR each task in list
+#            IF tasks priority is equal to highest priority THEN
+#                PRINT task
+#
+#    FUNCTION remove oldest, highest priority task
+#        remove task of index 0 in list
+#
+#    FUNCTION add task
+#        FOR each task_1 in list
+#            IF task to add priority is lower than task_1's THEN
+#                add task to add before task_1
+#
+#            IF task to add priority is equal to or higher than task_1's THEN
+#                add task to add after task_1
+#
+#    FUNCTION change priority of task
+#        FOR each task in list
+#            IF task is the same as that which needs changing THEN
+#                change task priority
+#
+#    FUNCTION delete task
+#        FOR each task in list
+#            IF task is the same as that which needs deleting THEN
+#                delete task
+#
+#    FUNCTION re-arrange priorities
+#        INITIALISE list for priorities
+#
+#        FOR each task in list
+#            APPEND tasks priority to priorities list
+#
+#        SORT priorities list to make it unique
+#
+#        FOR each priority in priorities list
+#            FOR each task in list
+#                IF task priority equals priority in priorities list THEN
+#                    change priority of task priority
+
+#Python Code
+
 class ClothesPriorityQueue:
 
     #Constructor
@@ -158,21 +226,6 @@ class ClothesPriorityQueue:
 
 
 
-clothes = ClothesPriorityQueue()
-
-clothes.add_task(3, "Omar", "Hemming Pants", 3)
-clothes.add_task(3, "lily", "Shorten dress", 2)
-clothes.add_task(1, "Sam", "Fix zipper", 4)
-clothes.add_task(1, "Ollie", "Fix zipper", 3)
-clothes.add_task(4, "Cunt", "Fix zipper", 4)
-clothes.add_task(2, "NIgel", "Fix zipper", 9)
-clothes.print_queue()
-clothes.change_priority("cunt", 9)
-clothes.print_queue()
-clothes.rearrange_priorities()
-clothes.print_queue()
-
-#print(clothes.highest_priority())
 
 
 
