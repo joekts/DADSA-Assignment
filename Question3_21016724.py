@@ -1,4 +1,4 @@
-def max_footPath(self, count = 1):
+def max_footPath(binary_tree, count = 1):
 
     #Initialise list for all the counts
     counts = []
@@ -9,16 +9,16 @@ def max_footPath(self, count = 1):
         #If there are two children, add one to the count and go down both paths. 
         # If there is only one child, add one to the count and go down that path. 
         # If there are no children, add the count to the list of counts and break the loop
-        if self.left != None and self.right != None:
+        if binary_tree.left != None and binary_tree.right != None:
             count += 1
-            max_footPath(self.left, count)
-            max_footPath(self.right, count)
-        elif self.left != None:
+            max_footPath(binary_tree.left, count)
+            max_footPath(binary_tree.right, count)
+        elif binary_tree.left != None:
             count += 1
-            max_footPath(self.left, count)
-        elif self.right != None:
+            max_footPath(binary_tree.left, count)
+        elif binary_tree.right != None:
             count += 1
-            max_footPath(self.right, count)
+            max_footPath(binary_tree.right, count)
         else:
             counts.append(count)
             break
