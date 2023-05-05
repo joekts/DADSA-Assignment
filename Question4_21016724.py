@@ -30,11 +30,6 @@ def frequency(file_string, number, file_string_2 = None):
             continue
 
         word_frequency[word] = word_frequency.get(word, 0) + 1
-        #Increase count of word in dictionary
-        #if word in word_frequency:
-         #   word_frequency[word] += 1
-        #else:
-         #   word_frequency[word] = 1
 
     #Sort the dictionary by value
     sorted_word_frequency = sorted(word_frequency.items(), key=lambda x: x[1], reverse=True)
